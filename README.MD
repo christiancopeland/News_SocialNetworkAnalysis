@@ -2,7 +2,19 @@
 - Dynamically generate contextualized Social Network Graph Visualizations from News Articles
 
 ### Usage 
-- Make sure you have [Ollama](https://ollama.com/) installed, and provide the model name you want to use to create the network data 
+- Make sure you have [Ollama](https://ollama.com/) installed, and provide the model name you want to use to create the network data in generate_network_data():
+    - ``` python
+        data = {
+        "model": "qwen2.5-coder:14b",
+        "messages": messages,
+        "stream": stream,
+        "format": json_schema,
+        "options": {
+            "temperature": 0  # Lower temperature for more consistent outputs
+        }
+        }
+    ```
+
 
 - ```pip install -r requirements.txt```
 

@@ -41,7 +41,7 @@ def load_knowledge_graph(filename="network_dict.json"):
     return G, graph_data
 
 
-def message_r1(messages: list, stream: bool = False):
+def generate_network_data(messages: list, stream: bool = False):
     url = "http://localhost:11434/api/chat"
     headers = {"Content-Type": "application/json"}
     
@@ -229,7 +229,7 @@ def create_knowledge_graph(article_text: str = None, load_file: str = None, show
         # Get streaming response and accumulate
         print("Generating knowledge graph data...")
         response_full = ""
-        for chunk in message_r1(messages, stream=True):
+        for chunk in generate_network_data(messages, stream=True):
             if isinstance(chunk, str):
                 response_full += chunk
                 print(chunk, end="", flush=True)
