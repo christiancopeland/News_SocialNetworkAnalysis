@@ -11,11 +11,9 @@
         "format": json_schema,
         "options": {
             "temperature": 0  # Lower temperature for more consistent outputs
+            }
         }
-        }
-    ```
-
-
+        ```
 - ```pip install -r requirements.txt```
 
 - If generating network graph for the first time, provide txt file of article text
